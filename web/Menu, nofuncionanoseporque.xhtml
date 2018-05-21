@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <title>Menu</title>
+    </h:head>
+    <h:body>
+        <h:form id="frmMenu">
+            <p:growl id="Menssajes"/>
+                <p:menubar id="mnOpciones">
+                    <p:submenu label="TP 01">
+                        <p:menuitem value="Punto01"/>
+                        <p:menuitem value="Punto03"/>
+                        <p:commandButton id="Ordenar" value="Ordenar alfabeticamente" update="oPanel" actionListener="#{palabraFormBean.ordenarA()}"/>
+                    </p:submenu>
+                
+                    <p:submenu label="Parcial1">
+                        <p:menuitem value="Punto01" outcome="punto01"/>
+                        <p:menuitem value="Punto03" outcome="punto03"/>
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+    </h:body>
+</html>
